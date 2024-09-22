@@ -33,10 +33,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "public/app1/styles1.css",
-              "public/app2/styles2.css"
+              "public/app1/styles.css"
             ],
-            "scripts": ["public/app1/main1.js"]
+            "scripts": ["public/app1/main.js"]
           },
           "configurations": {
             "production": {

@@ -1,14 +1,5 @@
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { defineCustomElement } from 'vue';
+import App from './App.ce.vue'
 
-import { createCustomElement } from '@angular/elements';
-import { bootstrapApplication } from '@angular/platform-browser';
-
-
-bootstrapApplication(AppComponent, appConfig)
-.then((app) => {
-  customElements.define('app-2', createCustomElement(AppComponent, {
-    injector: (app).injector
-  }));
-})
-.catch((err) => console.error(err));
+const App2 = defineCustomElement(App);
+customElements.define('app-2', App2);

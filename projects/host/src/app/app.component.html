@@ -1,13 +1,21 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <a href="#" (click)="showApp('app-1')">App 1</a>
-      <a href="#" (click)="showApp('app-2')">App 2</a>
-    </div>
-  </div>
-</main>
+<nav class="main">
+  <ul class="menu">
+    <li><a href="#" (click)="showApp(null)">Home</a></li>
+    <li><a href="#" (click)="showApp('app-1')">App 1 Angular Web Component</a></li>
+    <li><a href="#" (click)="showApp('app-2')">App 2 Vue.js Web Component</a></li>
+  </ul>
+</nav>
 
+@if (!lastAppElement) {
+<div class="home-container">
+  <h1>Very basic Web component micro-frontends demo</h1>
+
+  <p>This is very simple example of micro-frontends with web components - to just present the basic concept. It uses Angular Elements to create web components and then use them in a host application.</p>
+  <h2 id="how-to-run">How to run</h2>
+  <p>Go to <code>projects/host</code> and run <code>npm install</code> and then <code>npm start</code></p>
+  <h2 id="how-to-change">How to change</h2>
+  <p>If you want to change child apps, go to <code>projects/app1</code> or <code>projects/app2</code> and run <code>npm install</code> and then <code>npm start</code> to edit the app. After that, you need to run <code>npm run build</code> to build the app and see the changes in the host.</p>
+</div>
+}
 
 <router-outlet />
-
-<h2>App 1</h2>

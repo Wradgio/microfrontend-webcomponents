@@ -14,12 +14,15 @@ export class AppComponent {
 
   lastAppElement: HTMLElement | null = null;
 
-  showApp(app: string) {
+  showApp(app: string | null) {
     if (this.lastAppElement) {
       document.body.removeChild(this.lastAppElement);
     }
-    const appElement = document.createElement(app);
-    document.body.appendChild(appElement);
-    this.lastAppElement = appElement;
+    this.lastAppElement = null;
+    if (app) {
+      const appElement = document.createElement(app);
+      document.body.appendChild(appElement);
+      this.lastAppElement = appElement;
+    }
   }
 }
