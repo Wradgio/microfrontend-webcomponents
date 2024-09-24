@@ -35,7 +35,8 @@
               "src/styles.scss",
               "public/app1/styles.css"
             ],
-            "scripts": ["public/app1/main.js"]
+            "scripts": ["public/app1/main.js"],
+            "externalDependencies": ["/app2/main.js"]
           },
           "configurations": {
             "production": {
